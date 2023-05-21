@@ -11,6 +11,7 @@
 		993268182A193D9B0077A4DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993268172A193D9B0077A4DF /* ContentView.swift */; };
 		9932681A2A193D9B0077A4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 993268192A193D9B0077A4DF /* Assets.xcassets */; };
 		9932681D2A193D9B0077A4DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9932681C2A193D9B0077A4DF /* Preview Assets.xcassets */; };
+		99C2D5BD2A1A70FE00193A11 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C2D5BC2A1A70FE00193A11 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		9932681C2A193D9B0077A4DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		993268232A1949FA0077A4DF /* LearnSwiftUi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnSwiftUi.entitlements; sourceTree = "<group>"; };
 		993268242A194A230077A4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		99C2D5BC2A1A70FE00193A11 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		993268142A193D9B0077A4DF /* LearnSwiftUi */ = {
 			isa = PBXGroup;
 			children = (
+				99C2D5BB2A1A70DC00193A11 /* Views */,
 				993268242A194A230077A4DF /* Info.plist */,
 				993268232A1949FA0077A4DF /* LearnSwiftUi.entitlements */,
 				993268152A193D9B0077A4DF /* LearnSwiftUiApp.swift */,
@@ -69,6 +72,14 @@
 				9932681C2A193D9B0077A4DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99C2D5BB2A1A70DC00193A11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99C2D5BC2A1A70FE00193A11 /* Card.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				993268182A193D9B0077A4DF /* ContentView.swift in Sources */,
+				99C2D5BD2A1A70FE00193A11 /* Card.swift in Sources */,
 				993268162A193D9B0077A4DF /* LearnSwiftUiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
