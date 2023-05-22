@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    let emojis = ["✅", "‼️", "❕", "❔", "💍", "🎒", "🐬", "E", "F", "2", "4", "M", "K", "W", "S", "A", "D"]
     
     @State var emojiCount = 8
     
@@ -22,13 +21,37 @@ struct ContentView: View {
                                 GridItem(.adaptive(minimum: 100))
                             ]
                         ) {
-                            ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                            ForEach(EmojiMemoryGameViewModel.emojis[0..<emojiCount], id: \.self) { emoji in
                                 CardView(content: emoji)
                                     .aspectRatio(2 / 3, contentMode: .fit)
                             }
                         }
                         .padding(.horizontal, 2)
                     }
+                }
+                HStack {
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "car")
+                            .font(.largeTitle)
+                    }
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                            .font(.largeTitle)
+                    }
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                            .font(.largeTitle)
+                    }
+                    Spacer()
                 }
             }
             .navigationTitle("My Application")
