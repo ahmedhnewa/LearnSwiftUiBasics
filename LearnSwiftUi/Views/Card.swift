@@ -15,17 +15,22 @@ struct CardView: View {
             let shape = RoundedRectangle(cornerRadius: 20)
             if isFaceUp {
                 shape
-                    .stroke(lineWidth: 3)
-                    .foregroundColor(Color.red)
+                    .strokeBorder(lineWidth: 3)
+                    .foregroundColor(.red)
+//                shape.foregroundColor(.white)
+//                shape.stroke(lineWidth: 3)
                 Text(content)
-                    .font(.system(size: 50))
+//                    .font(.system(size: 50))
+                    .font(.title)
             } else {
-                shape.fill()
+                shape
+                    .fill()
                     .onTapGesture {
                         isFaceUp.toggle()
                     }
             }
-        }.padding(.horizontal)
+        }
+        .padding(.horizontal, 4)
     }
 }
 

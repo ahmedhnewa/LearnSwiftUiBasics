@@ -8,63 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    let emojis = ["✅", "‼️", "❕", "💍", "💍", "🎒", "🐬"]
+    let emojis = ["✅", "‼️", "❕", "❔", "💍", "🎒", "🐬", "E", "F", "2", "4", "M", "K", "W", "S", "A", "D"]
     
-    @State var emojiCount = 1
+    @State var emojiCount = 8
     
     var body: some View {
         NavigationView {
             VStack {
-                if (emojiCount >= 0) {
-                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                        CardView(content: emoji)
+                ScrollView {
+                    if emojiCount >= 0 {
+                        LazyVGrid(
+                            columns: [
+                                GridItem(.adaptive(minimum: 100))
+                            ]
+                        ) {
+                            ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                                CardView(content: emoji)
+                                    .aspectRatio(2 / 3, contentMode: .fit)
+                            }
+                        }
+                        .padding(.horizontal, 2)
                     }
                 }
-                CardView(content: emojis[0])
-                HStack {
-                    CardView(content: emojis[1])
-                    CardView(content: emojis[2])
-                    CardView(content: emojis[3])
-                }
-                HStack {
-                    CardView(content: emojis[4])
-                    CardView(content: emojis[5])
-                }
-                HStack {
-                    Spacer()
-                    remove
-                    Spacer()
-                    add
-                    Spacer()
-                }.padding(.horizontal)
             }
             .navigationTitle("My Application")
-        }
-    }
-    
-    var remove: some View {
-        Button {
-            print(emojiCount)
-            if (emojiCount == 0) {
-                return
-            }
-            emojiCount -= 1
-        } label: {
-            Image(systemName: "minus.circle")
-                .font(.largeTitle)
-        }
-    }
-    
-    var add: some View {
-        Button {
-            print(emojiCount)
-            if (emojiCount == emojis.count) {
-                return
-            }
-            emojiCount += 1
-        } label: {
-            Image(systemName: "plus.circle")
-                .font(.largeTitle)
         }
     }
     
